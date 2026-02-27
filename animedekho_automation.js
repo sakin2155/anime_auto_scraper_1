@@ -170,7 +170,7 @@ async function sendSlackNotification(result) {
 // Main execution
 async function main() {
     const args = process.argv.slice(2);
-    const limit = args[0] ? parseInt(args[0]) : EXPORT_LIMIT;
+    let limit = args[0] ? parseInt(args[0]) : EXPORT_LIMIT;
     
     // Default to all (0) if not specified
     if (!args[0] && EXPORT_LIMIT === 0) {
